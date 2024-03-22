@@ -1,0 +1,48 @@
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Tartalom középre igazítása */
+  gap: 20px; /* Távolság a csempék között */
+  padding: 20px; /* A konténer paddingja */
+}
+
+.category-tile {
+  flex: 1 1 calc(33.333% - 40px); /* Flex item beállítása, hogy egy sorban 3 legyen, figyelembe véve a gap-et */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px; /* Minimum szélesség beállítása */
+  max-width: 300px; /* Maximum szélesség beállítása, hogy ne legyen túl széles egy nagy képernyőn */
+  height: 200px;
+  margin: 10px;
+  background-color: #f9f1a5;
+  color: #4a4a4a;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.category-tile:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .category-tile {
+    flex: 1 1 calc(50% - 40px); /* Kisebb képernyőkön két csempe egy sorban */
+  }
+}
+
+@media (max-width: 480px) {
+  .category-tile {
+    flex: 1 1 100%; /* Nagyon kis képernyőkön csak egy csempe egy sorban */
+    max-width: none; /* Maximum szélesség eltávolítása a teljes szélesség engedélyezéséhez */
+  }
+}
+
+a {
+  color: inherit; /* A link színének öröklése */
+  text-decoration: none; /* A link aláhúzásának eltávolítása */
+}

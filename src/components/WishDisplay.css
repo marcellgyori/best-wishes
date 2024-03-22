@@ -1,0 +1,103 @@
+.wish-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.wish-card {
+  position: relative; /* Pozícionáláshoz szükséges */
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  background-color: #f9f1a5; /* Pasztel sárga háttér */
+  color: #4a4a4a; /* Sötétszürke szöveg */
+}
+
+.wish-card p {
+  
+  margin: 0;
+  margin-bottom: 100px;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f9f1a5; /* Pasztel sárga háttér */
+  color: #4a4a4a; /* Sötétszürke szöveg */
+  margin: 5px;
+  font-size: 14px;
+  transition: transform 0.2s, box-shadow 0.2s; /* Animáció hozzáadása */
+}
+
+button:hover {
+  background-color: #f9d567; /* Sötétebb sárga árnyalat hoverkor */
+  transform: translateY(-2px); /* Enyhe emelés hoverkor */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Nagyobb árnyék hoverkor */
+}
+
+.names-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.name-button {
+  background-color: #f9f1a5; /* Pasztel sárga háttér */
+  color: #4a4a4a; /* Sötétszürke szöveg */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin: 5px;
+  transition: transform 0.2s, box-shadow 0.2s; /* Animáció hozzáadása */
+}
+
+.name-button:hover {
+  background-color: #f9d567; /* Sötétebb sárga árnyalat hoverkor */
+  transform: translateY(-2px); /* Enyhe emelés hoverkor */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Nagyobb árnyék hoverkor */
+}
+
+.icon {
+  position: absolute;
+  bottom: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.image-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon.go-back-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.shuffle-icon {
+  right: 50px; /* Elegendő hely hagyása a másolás ikon számára */
+}
+
+.copy-icon {
+  right: 10px;
+}
