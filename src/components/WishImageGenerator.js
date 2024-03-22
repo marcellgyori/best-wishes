@@ -105,25 +105,32 @@ function WishImageGenerator({
   };
 
   return (
-    <div style={{ maxWidth: "1024px", margin: "0 auto", position: "relative" }}>
+    <div
+      style={{ maxWidth: "1024px", margin: "20px auto", position: "relative" }}
+    >
       {imageUrl && (
         <div style={{ textAlign: "center", marginBottom: "20px" }}>
           <button onClick={downloadImage}>Download Image</button>
         </div>
       )}
-      <div style={{ transform: "scale(0.5)", margin: "0 auto" }}>
-        <ImageGallery
-          items={backgroundImages.map((image) => ({
-            original: image,
-            thumbnail: image,
-          }))}
-          onSlide={(currentIndex) =>
-            setSelectedImage(backgroundImages[currentIndex])
-          }
-          showPlayButton={false}
-          showFullscreenButton={false}
-          showThumbnails={false}
-        />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ transform: "scale(0.5)", transformOrigin: "top center" }}>
+          <ImageGallery
+            items={images}
+            onSlide={(currentIndex) =>
+              setSelectedImage(backgroundImages[currentIndex])
+            }
+            showPlayButton={false}
+            showFullscreenButton={false}
+            showThumbnails={false}
+          />
+        </div>
       </div>
       <canvas
         ref={canvasRef}
